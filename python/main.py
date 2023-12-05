@@ -21,8 +21,8 @@ get_logging().info("Program started successfully.")
 start_time = time.time()
 PAGE_NUMBER = 50
 
-for page_number in range(1, PAGE_NUMBER):
-    urls = get_page_link(page_number)
+for page_number in range(0, PAGE_NUMBER):
+    urls = get_page_link(page_number+1)
     soup = get_soup(urls)
     post_urls = fetch_news_links(soup)
 
